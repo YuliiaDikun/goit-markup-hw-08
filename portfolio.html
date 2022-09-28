@@ -22,21 +22,68 @@
           <a href="./index.html" class="logo"
             ><span class="logo__text logo__text--blue">Web</span>Studio</a
           >
-          <ul class="site-nav">
+          <button
+            type="button"
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+              <use class="icon-cross" href="./images/icons/sprite.svg#icon-close"></use>
+              <use class="icon-menu" href="./images/icons/sprite.svg#icon-menu"></use>
+            </svg>
+          </button>
+          <div data-menu class="menu-container">
+            <ul class="site-nav">
+              <li class="site-nav__item">
+                <a href="./index.html" class="site-nav__link site-nav__link--current">Студія</a>
+              </li>
+              <li class="site-nav__item">
+                <a href="./portfolio.html" class="site-nav__link">Портфоліо</a>
+              </li>
+              <li class="site-nav__item">
+                <a href="" class="site-nav__link">Контакти</a>
+              </li>
+            </ul>
+            <ul class="out-nav">
+              <li class="out-nav__item">
+                <a href="tel:+380961111111" class="out-nav__link">
+                  <svg class="out-nav__icon" width="10" height="16">
+                    <use href="./images/icons/sprite.svg#icon-phone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li class="out-nav__item">
+                <a href="mailto:info@devstudio.com" class="out-nav__link mail">
+                  <svg class="out-nav__icon" width="16" height="12">
+                    <use href="./images/icons/sprite.svg#icon-mail"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="network">
+              <li class="network__item"><a href="" class="network__link">Instagram</a></li>
+              <li class="network__item"><a href="" class="network__link">Twitter</a></li>
+              <li class="network__item"><a href="" class="network__link">Facebook</a></li>
+              <li class="network__item"><a href="" class="network__link">LinkedIn</a></li>
+            </ul>
+          </div>
+          <ul class="site-nav tablet">
             <li class="site-nav__item">
-              <a href="./index.html" class="site-nav__link">Студія</a>
+              <a href="./index.html" class="site-nav__link site-nav__link--current">Студія</a>
             </li>
             <li class="site-nav__item">
-              <a href="./portfolio.html" class="site-nav__link site-nav__link--current"
-                >Портфоліо</a
-              >
+              <a href="./portfolio.html" class="site-nav__link">Портфоліо</a>
             </li>
             <li class="site-nav__item">
               <a href="" class="site-nav__link">Контакти</a>
             </li>
           </ul>
         </nav>
-        <ul class="out-nav">
+        <ul class="out-nav tablet">
           <li class="out-nav__item">
             <a href="mailto:info@devstudio.com" class="out-nav__link">
               <svg class="out-nav__icon" width="16" height="12">
@@ -83,7 +130,28 @@
             <li class="works-list__item">
               <a href="" class="works-list__link">
                 <div class="works-list__thumb">
-                  <img src="./images/works/01.jpg" alt="" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/works/1-s.jpg 1x ./images/works/1-s@2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+
+                    <source
+                      srcset="./images/works/1-m.jpg 1x ./images/works/1-m@2x.jpg 2x"
+                      media="(min-width:767px)"
+                      sizes=""
+                      type=""
+                    />
+
+                    <source
+                      srcset="./images/works/1-l.jpg 1x ./images/works/1-l@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                      sizes=""
+                      type=""
+                    />
+
+                    <img src="./images/works/1-s.jpg" alt="Приклад роботи" />
+                  </picture>
                   <div class="works-list__descr">
                     <p class="works-list__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -101,7 +169,28 @@
             <li class="works-list__item">
               <a href="" class="works-list__link">
                 <div class="works-list__thumb">
-                  <img src="./images/works/02.jpg" alt="" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/works/2-s.jpg 1x ./images/works/2-s@2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+
+                    <source
+                      srcset="./images/works/2-m.jpg 1x ./images/works/2-m@2x.jpg 2x"
+                      media="(min-width:767px)"
+                      sizes=""
+                      type=""
+                    />
+
+                    <source
+                      srcset="./images/works/2-l.jpg 1x ./images/works/2-l@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                      sizes=""
+                      type=""
+                    />
+
+                    <img src="./images/works/2-s.jpg" alt="Приклад роботи" />
+                  </picture>
                   <div class="works-list__descr">
                     <p class="works-list__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -120,7 +209,28 @@
             <li class="works-list__item">
               <a href="" class="works-list__link">
                 <div class="works-list__thumb">
-                  <img src="./images/works/03.jpg" alt="" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/works/3-s.jpg 1x ./images/works/3-s@2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+
+                    <source
+                      srcset="./images/works/3-m.jpg 1x ./images/works/3-m@2x.jpg 2x"
+                      media="(min-width:767px)"
+                      sizes=""
+                      type=""
+                    />
+
+                    <source
+                      srcset="./images/works/3-l.jpg 1x ./images/works/3-l@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                      sizes=""
+                      type=""
+                    />
+
+                    <img src="./images/works/3-s.jpg" alt="Приклад роботи" />
+                  </picture>
                   <div class="works-list__descr">
                     <p class="works-list__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -138,7 +248,28 @@
             <li class="works-list__item">
               <a href="" class="works-list__link">
                 <div class="works-list__thumb">
-                  <img src="./images/works/04.jpg" alt="" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/works/4-s.jpg 1x ./images/works/4-s@2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+
+                    <source
+                      srcset="./images/works/4-m.jpg 1x ./images/works/4-m@2x.jpg 2x"
+                      media="(min-width:767px)"
+                      sizes=""
+                      type=""
+                    />
+
+                    <source
+                      srcset="./images/works/4-l.jpg 1x ./images/works/4-l@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                      sizes=""
+                      type=""
+                    />
+
+                    <img src="./images/works/4-s.jpg" alt="Приклад роботи" />
+                  </picture>
                   <div class="works-list__descr">
                     <p class="works-list__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -156,7 +287,28 @@
             <li class="works-list__item">
               <a href="" class="works-list__link">
                 <div class="works-list__thumb">
-                  <img src="./images/works/05.jpg" alt="" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/works/5-s.jpg 1x ./images/works/5-s@2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+
+                    <source
+                      srcset="./images/works/5-m.jpg 1x ./images/works/5-m@2x.jpg 2x"
+                      media="(min-width:767px)"
+                      sizes=""
+                      type=""
+                    />
+
+                    <source
+                      srcset="./images/works/5-l.jpg 1x ./images/works/5-l@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                      sizes=""
+                      type=""
+                    />
+
+                    <img src="./images/works/5-s.jpg" alt="Приклад роботи" />
+                  </picture>
                   <div class="works-list__descr">
                     <p class="works-list__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -174,7 +326,28 @@
             <li class="works-list__item">
               <a href="" class="works-list__link">
                 <div class="works-list__thumb">
-                  <img src="./images/works/06.jpg" alt="" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/works/6-s.jpg 1x ./images/works/6-s@2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+
+                    <source
+                      srcset="./images/works/6-m.jpg 1x ./images/works/6-m@2x.jpg 2x"
+                      media="(min-width:767px)"
+                      sizes=""
+                      type=""
+                    />
+
+                    <source
+                      srcset="./images/works/6-l.jpg 1x ./images/works/6-l@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                      sizes=""
+                      type=""
+                    />
+
+                    <img src="./images/works/6-s.jpg" alt="Приклад роботи" />
+                  </picture>
                   <div class="works-list__descr">
                     <p class="works-list__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -192,7 +365,28 @@
             <li class="works-list__item">
               <a href="" class="works-list__link">
                 <div class="works-list__thumb">
-                  <img src="./images/works/07.jpg" alt="" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/works/7-s.jpg 1x ./images/works/7-s@2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+
+                    <source
+                      srcset="./images/works/7-m.jpg 1x ./images/works/7-m@2x.jpg 2x"
+                      media="(min-width:767px)"
+                      sizes=""
+                      type=""
+                    />
+
+                    <source
+                      srcset="./images/works/7-l.jpg 1x ./images/works/7-l@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                      sizes=""
+                      type=""
+                    />
+
+                    <img src="./images/works/7-s.jpg" alt="Приклад роботи" />
+                  </picture>
                   <div class="works-list__descr">
                     <p class="works-list__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -210,7 +404,28 @@
             <li class="works-list__item">
               <a href="" class="works-list__link">
                 <div class="works-list__thumb">
-                  <img src="./images/works/08.jpg" alt="" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/works/8-s.jpg 1x ./images/works/8-s@2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+
+                    <source
+                      srcset="./images/works/8-m.jpg 1x ./images/works/8-m@2x.jpg 2x"
+                      media="(min-width:767px)"
+                      sizes=""
+                      type=""
+                    />
+
+                    <source
+                      srcset="./images/works/8-l.jpg 1x ./images/works/8-l@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                      sizes=""
+                      type=""
+                    />
+
+                    <img src="./images/works/8-s.jpg" alt="Приклад роботи" />
+                  </picture>
                   <div class="works-list__descr">
                     <p class="works-list__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -228,7 +443,28 @@
             <li class="works-list__item">
               <a href="" class="works-list__link">
                 <div class="works-list__thumb">
-                  <img src="./images/works/09.jpg" alt="" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/works/9-s.jpg 1x ./images/works/9-s@2x.jpg 2x"
+                      media="(max-width:767px)"
+                    />
+
+                    <source
+                      srcset="./images/works/9-m.jpg 1x ./images/works/9-m@2x.jpg 2x"
+                      media="(min-width:767px)"
+                      sizes=""
+                      type=""
+                    />
+
+                    <source
+                      srcset="./images/works/9-l.jpg 1x ./images/works/9-l@2x.jpg 2x"
+                      media="(min-width:1200px)"
+                      sizes=""
+                      type=""
+                    />
+
+                    <img src="./images/works/9-s.jpg" alt="Приклад роботи" />
+                  </picture>
                   <div class="works-list__descr">
                     <p class="works-list__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
