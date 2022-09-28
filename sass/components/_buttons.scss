@@ -1,8 +1,11 @@
 .hero__btn { 
-  @include button(216px);   
+  @include button();   
   font-weight: 700;
   line-height: 1.87;
-  letter-spacing: 0.06em;  
+  letter-spacing: 0.06em; 
+  @media screen and (min-width:768px) {
+    @include button(216px);
+  }
 }
 
 .form-signup__btn {
