@@ -2,10 +2,16 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: $main-background-color;
+  text-align: center;
 }
 
 .wrapper {
-  display: flex;  
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  @media screen and (min-width: 768px) {
+  }
 }
 
 .page-footer__title {

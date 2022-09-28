@@ -1,18 +1,28 @@
 .workers-list {
-  display: flex;
-  gap: 30px;
   font-size: 16px;
-  line-height: 1.18;
-  text-align: center;
+  line-height: 1.18;  
+  @media screen and (min-width:768px) {
+    display: flex;
+    gap: 30px;
+  }  
 }
 
 .workers-list__item {
+  max-width: 450px;
+  text-align: center;
   @include link-shadow();
   border-radius: 0px 0px 4px 4px;
   background-color: $main-white-color;
+  @media screen and (min-width:768px) {
+    width: calc((100% - 2 * 30px) / 2);
+  }
+  
+  @media screen and (min-width:1200px) {
+    width: 270px;
+  }
 }
 
-.workers-list__title {  
+.workers-list__title { 
   margin-top: 30px; 
   margin-bottom: 10px;
   color: $title-color;
@@ -26,7 +36,10 @@
 .workers-social {
   @include flex(flex, center, center);
   gap: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
+  @media screen and (min-width:1200px) {
+    margin-bottom: 30px;
+  }
 }
 
 .workers-social__link {
