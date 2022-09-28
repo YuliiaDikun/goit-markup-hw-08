@@ -1,8 +1,15 @@
 .modal-form {
-  width: 448px;
+  max-width: 370px;
+  width: 100%;
   margin-top: 12px;
   margin-left: auto;
-  margin-right: auto;  
+  margin-right: auto;
+  @media screen and (min-width: 480px) {
+    max-width: 370px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 448px;
+  }
 }
 
 .modal-form__section {
@@ -18,6 +25,12 @@
   margin-bottom: 4px;
   &--checkbox {
     @include flex(flex, center, center);
+    font-size: 12px;
+    line-height: calc(14px / 12px);
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: calc(24px / 14px);
+    }
   }
 }
 
@@ -28,21 +41,21 @@
   }
 }
 
-.modal-form__input {  
+.modal-form__input {
   width: 100%;
   padding-top: 11px;
   padding-bottom: 11px;
   padding-left: 42px;
   border: 1px solid;
   border-color: rgba(33, 33, 33, 0.2);
-  border-radius: 4px; 
+  border-radius: 4px;
   transform: border-color 250ms $timing-function, fill 250ms $timing-function;
   &:hover,
   &:focus {
-    @include modal-border($accent-color);    
+    @include modal-border($accent-color);
   }
   &:focus-visible {
-    @include modal-outline($accent-color);    
+    @include modal-outline($accent-color);
   }
 
   &--checkbox {
@@ -54,7 +67,7 @@
     &:checked ~ .modal-form__label--checkbox .modal-form__icon--checkbox {
       display: none;
     }
-    
+
     &:checked ~ .modal-form__label--checkbox .modal-form__icon--checked {
       display: block;
       margin-right: 7px;
@@ -101,7 +114,7 @@
   &:focus {
     @include modal-border($accent-color);
   }
-  &:focus-visible {    
+  &:focus-visible {
     @include modal-outline($accent-color);
   }
   &::placeholder {
@@ -128,4 +141,3 @@
     background-color: $accent-color;
   }
 }
-

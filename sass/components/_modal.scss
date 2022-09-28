@@ -2,6 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
+
   @include size(100%, 100%);
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
@@ -9,26 +10,33 @@
   transition: opacity 500ms $timing-function, transform 250ms $timing-function;
 }
 
-.backdrop.backdrop--is-hidden { 
+.backdrop.backdrop--is-hidden {
   opacity: 0;
-  pointer-events: none;  
+  pointer-events: none;
 }
 
-.backdrop.backdrop--is-hidden .modal{	
+.backdrop.backdrop--is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.9);
-} 
+}
 
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 528px;
-  min-height: 581px;
+  width: 85%;
   padding: 38px 40px 40px 40px;
   background-color: $main-white-color;
-  
+
   transform: translate(-50%, -50%) scale(1);
   transition: transform 500ms $timing-function;
+  @media screen and (min-width: 480px) {
+    max-width: 450px;
+    min-height: 609px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 528px;
+    min-height: 581px;
+  }
 }
 
 .modal__close {
@@ -42,13 +50,13 @@
   background-color: $main-white-color;
   @include border($modal-close-color);
   border-radius: 50%;
-	&:hover,
-	&:focus {
-		fill: $accent-color;
-	}
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
 }
 
-.modal__icon {  
+.modal__icon {
   @include size(18px, 18px);
 }
 
