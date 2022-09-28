@@ -56,3 +56,10 @@
     display: none;
   }
 }
+
+.menu__button {
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}

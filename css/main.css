@@ -134,6 +134,10 @@ ul {
   }
 }
 
+.menu__button:hover, .menu__button:focus {
+  fill: #2196F3;
+}
+
 @media screen and (max-width: 767px) {
   .network {
     display: flex;
