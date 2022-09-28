@@ -1,0 +1,26 @@
+.page-footer__social {
+  margin-left: 70px;
+}
+
+.social-list {
+  @include flex(flex, center, center);
+  gap: 10px;
+}
+
+.social-list__link {
+  @include flex(inline-flex, center, center);
+  padding: 0;
+  @include size(44px, 44px);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms $timing-function;  
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+
+.social-list__icon{
+  @include size(20px, 20px);
+  fill: $main-white-color;
+}

@@ -1,0 +1,61 @@
+.header {
+  position: relative;
+  &__container {    
+    @media screen and (min-width: 768px) {
+        @include flex(flex, center, center);
+      }
+    
+  }
+  &--bb {
+    border-bottom: 1px solid $border-bottom-color;
+  }
+}
+
+.menu-toggle { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-toggle .icon-cross {
+  display: none;
+}
+
+.menu-toggle.is-open .icon-cross {
+  display: block;
+}
+
+.menu-toggle.is-open .icon-menu {
+  display: none;
+}
+.menu-container {
+  display: none;
+  position: absolute;
+  top: 99%;
+  left: 0%;
+  width: 101%;
+  background-color: $main-white-color;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 40px;
+  &.is-open {
+    display: block;
+  }
+  @media screen and (min-width: 767px) {
+    display: none;
+  }
+}

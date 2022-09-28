@@ -1,0 +1,31 @@
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  &--grey {
+    background-color: $minor-background-color;
+  }
+}
+
+.section__title {
+  margin-bottom: 50px;
+  color: $title-color;
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  line-height: 1.16;
+  &--no-pb {
+    padding-bottom: 0;
+  }
+  &--hidden {
+    position: absolute;
+    white-space: nowrap;
+    @include size(1px, 1px);
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
+}
+

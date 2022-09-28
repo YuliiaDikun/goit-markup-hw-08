@@ -1,0 +1,22 @@
+.clients {
+  display: flex;
+  gap: 30px;
+}
+
+.clients__item {
+  @include size(170px, 92px);  
+}
+
+.clients__link {
+  @include flex(inline-flex, center, center);
+  @include size(100%, 100%);
+  fill: $icon-color;
+  @include border($icon-color);  
+  border-radius: 4px;
+    transition: fill 250ms $timing-function, border 250ms $timing-function;
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+    @include border($accent-color);    
+  }
+}
