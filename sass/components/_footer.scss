@@ -2,7 +2,9 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: $main-background-color;
-  text-align: center;
+  @media screen and (max-width: 1200px) {
+    text-align: center;
+  }
 }
 
 .wrapper {
@@ -11,6 +13,14 @@
   gap: 60px;
 
   @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+  }
+  @media screen and (min-width: 1200px) {
+    gap: 0;
+    flex-wrap: nowrap;
   }
 }
 

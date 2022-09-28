@@ -1,17 +1,16 @@
 .header {
   position: relative;
-  &__container {    
+  &__container {
     @media screen and (min-width: 768px) {
-        @include flex(flex, center, center);
-      }
-    
+      @include flex(flex, center, center);
+    }
   }
   &--bb {
     border-bottom: 1px solid $border-bottom-color;
   }
 }
 
-.menu-toggle { 
+.menu-toggle {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,13 +44,11 @@
 .menu-container {
   display: none;
   position: absolute;
-  top: 99%;
+  top: 100%;
   left: 0%;
-  width: 101%;
+  width: 100%;
   background-color: $main-white-color;
-  padding-top: 48px;
-  padding-bottom: 48px;
-  padding-left: 40px;
+  padding: 48px 40px;
   &.is-open {
     display: block;
   }
