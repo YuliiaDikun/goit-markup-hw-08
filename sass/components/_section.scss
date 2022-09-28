@@ -1,8 +1,17 @@
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   &--grey {
     background-color: $minor-background-color;
+  }
+  &--desktop {
+    @media screen and (max-width: 1200px) {
+        display: none;
+      }
+  }
+  @media screen and (min-width:1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 

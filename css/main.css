@@ -499,7 +499,7 @@ ul {
   text-align: center;
   background-color: #2F303A;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
@@ -516,6 +516,13 @@ ul {
   background-position: center;
 }
 @media screen and (min-width: 768px) {
+  .hero--overlay {
+    max-width: 768px;
+    max-height: 400px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg-tablet.jpg");
+  }
+}
+@media screen and (min-width: 1200px) {
   .hero--overlay {
     max-width: 1600px;
     max-height: 600px;
@@ -535,7 +542,7 @@ ul {
   margin-bottom: 30px;
   color: #FFFFFF;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .hero__title {
     width: 696px;
     font-size: 44px;
@@ -544,11 +551,22 @@ ul {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .section--grey {
   background-color: #F5F4FA;
+}
+@media screen and (max-width: 1200px) {
+  .section--desktop {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .section__title {
@@ -575,9 +593,12 @@ ul {
   margin: -1px;
 }
 
-.features-list {
-  display: flex;
-  gap: 30px;
+@media screen and (min-width: 768px) {
+  .features-list {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
 }
 
 .features-list__item:nth-child(1)::before {
@@ -602,14 +623,30 @@ ul {
   background-position: center;
   background-repeat: no-repeat;
 }
+@media screen and (min-width: 768px) {
+  .features-list__item {
+    width: calc((100% - 60px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features-list__item {
+    width: 270px;
+  }
+}
 
 .features-list__title {
+  text-align: center;
   margin-bottom: 10px;
   color: #212121;
   font-size: 14px;
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .features-list__title {
+    text-align: left;
+  }
 }
 
 .features-list__descr {
