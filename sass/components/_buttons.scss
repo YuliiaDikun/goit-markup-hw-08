@@ -24,11 +24,18 @@
 }
 
 .modal-form__btn {
-  @include button(216px);
+  @include button(215px);
   display: block;
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
+  @media screen and (max-width: 480px) {
+    @include button(194px);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   &:hover,
   &:focus {
     background-color: $accent-button-color;
