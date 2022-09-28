@@ -1,55 +1,64 @@
 .workers-list {
   font-size: 16px;
-  line-height: 1.18;  
-  @media screen and (min-width:768px) {
+  line-height: 1.18;
+  @media screen and (min-width: 768px) {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
-  }  
+  }
 }
 
 .workers-list__item {
   max-width: 450px;
+  max-height: 622px;
+  height: 100%;
   text-align: center;
   @include link-shadow();
   border-radius: 0px 0px 4px 4px;
   background-color: $main-white-color;
-  @media screen and (min-width:768px) {
-    width: calc((100% - 2 * 30px) / 2);
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
   }
-  
-  @media screen and (min-width:1200px) {
+
+  @media screen and (min-width: 1200px) {
     width: 270px;
   }
 }
 
-.workers-list__title { 
-  margin-top: 30px; 
-  margin-bottom: 10px;
-  color: $title-color;
-  font-weight: 500;  
+.workers-list__item:not(:last-child) {
+  @media screen and(max-width:768px) {
+    margin-bottom: 30px;
+  }
 }
 
-.workers-list__descr {  
-  margin-bottom: 16px;  
+.workers-list__title {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: $title-color;
+  font-weight: 500;
+}
+
+.workers-list__descr {
+  margin-bottom: 16px;
 }
 
 .workers-social {
   @include flex(flex, center, center);
   gap: 10px;
-  margin-bottom: 24px;
-  @media screen and (min-width:1200px) {
-    margin-bottom: 30px;
+  padding-bottom: 24px;
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 30px;
   }
 }
 
 .workers-social__link {
-  @include flex(inline-flex, center, center);  
+  @include flex(inline-flex, center, center);
   @include size(44px, 44px);
   border-radius: 50%;
   fill: $icon-color;
   background-color: transparent;
-    transition: background-color 250ms $timing-function, fill 250ms $timing-function;
-  
+  transition: background-color 250ms $timing-function, fill 250ms $timing-function;
+
   &:hover,
   &:focus {
     background-color: $accent-color;
