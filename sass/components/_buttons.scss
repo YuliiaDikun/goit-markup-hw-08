@@ -50,7 +50,13 @@
 }
 
 .buttons-list {
-  @include flex(flex, center, center);
+  @include flex(flex, center, flex-start);
+  flex-wrap: wrap;
   margin-bottom: 50px;
-  gap: 8px;
+  column-gap: 8px;
+  row-gap: 15px;
+  @media screen and (min-width: 760px) {
+    @include flex(flex, center, center);
+    gap: 8px;
+  }
 }

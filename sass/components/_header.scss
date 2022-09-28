@@ -22,6 +22,7 @@
   border: none;
   border-radius: 50%;
   outline: none;
+  z-index: 1000;
 }
 
 @media (min-width: 768px) {
@@ -44,13 +45,14 @@
 .menu-container {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 0;
   left: 0%;
   width: 100%;
   background-color: $main-white-color;
   padding: 48px 40px;
   &.is-open {
     display: block;
+    z-index: 999;
   }
   @media screen and (min-width: 767px) {
     display: none;
