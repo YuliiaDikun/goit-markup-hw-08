@@ -11,13 +11,6 @@
 .form-signup__btn {
   @include button();
   padding: 10px 28px;
-  &::after {
-    content: '';
-    width: 24px;
-    height: 24px;
-    margin-left: 10px;
-    background-image: url('../images/icons/send.svg');
-  }
   @media screen and(min-width:1200px) {
     margin-left: 12px;
   }
@@ -43,8 +36,8 @@
 }
 
 .buttons-list__btn {
-  @include button(auto);
-  padding: 6px 25px;
+  @include button(auto, 38px);
+  padding: 6px 22px;
   background-color: $minor-background-color;
   color: $title-color;
   &:hover,
@@ -59,11 +52,17 @@
 .buttons-list {
   @include flex(flex, center, flex-start);
   flex-wrap: wrap;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   column-gap: 8px;
   row-gap: 15px;
-  @media screen and (min-width: 760px) {
-    @include flex(flex, center, center);
-    gap: 8px;
+  @media screen and (max-width: 767px) {
+    max-width: 326px;
+  }
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
   }
 }

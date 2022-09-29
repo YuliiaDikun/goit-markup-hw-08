@@ -1,34 +1,12 @@
 .features-list {
   @media screen and (min-width: 768px) {
-    @include flex(flex, center, center);
+    display: flex;
     gap: 30px;
     flex-wrap: wrap;
   }
 }
 
 .features-list__item {
-  &:nth-child(1)::before {
-    background-image: url('../images/icons/features-1.svg');
-  }
-  &:nth-child(2)::before {
-    background-image: url('../images/icons/features-2.svg');
-  }
-  &:nth-child(3)::before {
-    background-image: url('../images/icons/features-3.svg');
-  }
-  &:nth-child(4)::before {
-    background-image: url('../images/icons/features-4.svg');
-  }
-  &::before {
-    content: '';
-    display: block;
-    height: 120px;
-    margin-bottom: 30px;
-    border-radius: 4px;
-    background-color: $minor-background-color;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
   @media screen and (min-width: 768px) {
     width: calc((100% - 2 * 30px) / 2);
   }
@@ -38,9 +16,26 @@
 }
 
 .features-list__item:not(:last-child) {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     margin-bottom: 30px;
   }
+}
+
+.features-list__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  background-color: $minor-background-color;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.features-list__icon {
+  width: 70px;
+  height: 70px;
 }
 
 .features-list__title {

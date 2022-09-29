@@ -1,14 +1,21 @@
 .page-footer__form {
-  @media screen and (min-width: 768px) and (max-width: 1200px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     width: 450px;
   }
   @media screen and (min-width: 1200px) {
     margin-left: auto;
+    width: 560px;
+  }
+}
+
+.form-signup {
+  @media screen and (min-width: 1200px) {
+    display: flex;
   }
 }
 
 .form-signup__label {
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     display: block;
     margin-bottom: 20px;
   }
@@ -31,4 +38,11 @@
   @media screen and (min-width: 1200px) {
     width: 358px;
   }
+}
+
+.form-signup__icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  fill: $main-white-color;
 }

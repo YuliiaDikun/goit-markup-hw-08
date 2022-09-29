@@ -101,10 +101,12 @@
     display: none;
     fill: $accent-color;
     margin-right: 7px;
+    flex-shrink: 0;
   }
 
   &--checkbox {
     margin-right: 7px;
+    flex-shrink: 0;
   }
 }
 

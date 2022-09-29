@@ -1,18 +1,10 @@
 .works-list {
-  @include flex(flex, center, center);
+  display: flex;
   flex-wrap: wrap;
-  @media screen and (min-width: 768px) {
-    gap: 30px;
-    @include flex(flex, center);
-  }
+  gap: 30px;
 }
 
 .works-list__item {
-  @media screen and (max-width: 768px) {
-    &:not(:last-child) {
-      margin-bottom: 30px;
-    }
-  }
   @media screen and (min-width: 768px) {
     width: calc((100% - 30px) / 2);
   }
@@ -22,7 +14,9 @@
 }
 
 .works-list__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   list-style: none;
   text-decoration: none;
   overflow: hidden;
@@ -74,16 +68,11 @@
 }
 
 .works-list__content {
+  flex-grow: 1;
   padding: 20px 24px;
   border-right: 1px solid $border-color;
   border-bottom: 1px solid $border-color;
   border-left: 1px solid $border-color;
-}
-
-.works-list__content--pb {
-  @media screen and (min-width: 768px) and (max-width: 1200px) {
-    padding-bottom: 56px;
-  }
 }
 
 .works-list__title {

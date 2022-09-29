@@ -1,7 +1,7 @@
 .site-nav {
   display: block;
   @media screen and (max-width: 767px) {
-    margin-bottom: 302px;
+    margin-bottom: auto;
     &.tablet {
       display: none;
     }
@@ -16,7 +16,7 @@
 .site-nav__item:not(:last-child) {
   @media screen and (max-width: 767px) {
     margin-bottom: 36px;
-  } 
+  }
 }
 
 .site-nav__link {
@@ -27,7 +27,7 @@
   letter-spacing: 0.02em;
   text-decoration: none;
   transition: color 250ms $timing-function;
-  
+
   @media screen and (min-width: 767px) {
     position: relative;
     @include flex(inline-flex, center, center);
@@ -35,17 +35,17 @@
     padding-bottom: 32px;
     font-size: 14px;
     line-height: calc(16px / 14px);
-  } 
-  
+  }
+
   &:hover,
   &:focus {
-    color: $accent-color;    
-  }  
+    color: $accent-color;
+  }
 }
 
 .site-nav__link--current {
   color: $accent-color;
-  @media screen and (min-width: 767px){
+  @media screen and (min-width: 767px) {
     &::after {
       content: '';
       position: absolute;
@@ -56,5 +56,5 @@
       background-color: $accent-color;
       border-radius: 2px;
     }
-  } 
+  }
 }

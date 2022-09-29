@@ -1,7 +1,7 @@
 .out-nav {
   display: block;
   @media screen and (max-width: 767px) {
-    &.tablet{
+    &.tablet {
       display: none;
     }
   }
@@ -26,24 +26,27 @@
 
 .out-nav__link {
   font-weight: 500;
-  font-size: 34px;
+  font-size: 24px;
   line-height: calc(40px / 34px);
   color: $accent-color;
   letter-spacing: 0.02em;
   transition: color 250ms $timing-function;
+  @media screen and (min-width: 480px) {
+    font-size: 34px;
+  }
   @media screen and (min-width: 767px) {
-    @include flex(flex, center, center);    
-    
+    @include flex(flex, center, center);
+
     color: $main-text-color;
     font-size: 12px;
     line-height: calc(14px / 12px);
-  } 
+  }
 
   @media screen and (min-width: 1200px) {
-  padding-top: 32px;
-  padding-bottom: 32px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
-  
+
   &:focus,
   &:hover,
   .out-nav__icon:hover {
@@ -53,7 +56,7 @@
 }
 
 .out-nav__link.mail {
-  @media screen and (max-width: 767px) {    
+  @media screen and (max-width: 767px) {
     color: $main-text-color;
     font-size: 24px;
     line-height: calc(28px / 24px);
@@ -64,8 +67,26 @@
   @media screen and (max-width: 767px) {
     display: none;
   }
-  @media screen and (min-width: 767px) {
+  @media screen and (min-width: 768px) {
     margin-right: 10px;
     fill: currentColor;
-  }  
+    &--mail {
+      width: 14px;
+      height: 10px;
+    }
+    &--phone {
+      width: 10px;
+      height: 14px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &--mail {
+      width: 16px;
+      height: 12px;
+    }
+    &--phone {
+      width: 10px;
+      height: 16px;
+    }
+  }
 }
