@@ -768,6 +768,7 @@ ul {
 }
 
 .workers-list__item {
+  margin: 0 auto;
   max-width: 450px;
   max-height: 622px;
   height: 100%;
@@ -932,7 +933,6 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 24px;
   width: 100%;
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
@@ -948,10 +948,21 @@ ul {
   margin: 0;
   font-size: 16px;
   line-height: 1.55;
+  padding: 0 24px;
 }
 @media screen and (min-width: 480px) {
   .works-list__text {
     font-size: 18px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .works-list__text {
+    padding: 48px 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .works-list__text {
+    padding: 63px 24px;
   }
 }
 
