@@ -885,12 +885,15 @@ ul {
 .works-list {
   display: flex;
   align-items: center;
-  justify-content: normal;
+  justify-content: center;
   flex-wrap: wrap;
 }
 @media screen and (min-width: 768px) {
   .works-list {
     gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: normal;
   }
 }
 
