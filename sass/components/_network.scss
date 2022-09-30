@@ -1,5 +1,5 @@
 .network {
-  @media screen and (max-width: 767px) {
+  @include mq('tablet', max) {
     display: flex;
     flex-wrap: wrap;
     margin-top: 64px;
@@ -8,7 +8,7 @@
 }
 
 .network__item {
-  @media screen and (max-width: 767px) {
+  @include mq('tablet', max) {
     position: relative;
     &:not(:last-child)::after {
       content: '';
@@ -24,7 +24,7 @@
 }
 
 .network__link {
-  @media screen and (max-width: 767px) {
+  @include mq('tablet', max) {
     color: $accent-color;
     font-weight: 500;
     font-size: 18px;

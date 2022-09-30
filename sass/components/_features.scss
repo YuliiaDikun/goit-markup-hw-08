@@ -1,5 +1,5 @@
 .features-list {
-  @media screen and (min-width: 768px) {
+  @include mq('tablet') {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
@@ -7,16 +7,16 @@
 }
 
 .features-list__item {
-  @media screen and (min-width: 768px) {
+  @include mq('tablet') {
     width: calc((100% - 2 * 30px) / 2);
   }
-  @media screen and (min-width: 1200px) {
+  @include mq('desktop') {
     width: 270px;
   }
 }
 
 .features-list__item:not(:last-child) {
-  @media screen and (max-width: 767px) {
+  @include mq('tablet', max) {
     margin-bottom: 30px;
   }
 }
@@ -46,7 +46,7 @@
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
-  @media screen and (min-width: 768px) {
+  @include mq('tablet') {
     text-align: left;
   }
 }

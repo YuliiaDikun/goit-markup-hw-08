@@ -1,12 +1,12 @@
 .site-nav {
   display: block;
-  @media screen and (max-width: 767px) {
+  @include mq('tablet', max) {
     margin-bottom: auto;
     &.tablet {
       display: none;
     }
   }
-  @media screen and (min-width: 767px) {
+  @include mq('tablet') {
     @include flex(flex, center, center);
     margin-left: 93px;
     gap: 50px;
@@ -14,7 +14,7 @@
 }
 
 .site-nav__item:not(:last-child) {
-  @media screen and (max-width: 767px) {
+  @include mq('tablet', max) {
     margin-bottom: 36px;
   }
 }
@@ -28,7 +28,7 @@
   text-decoration: none;
   transition: color 250ms $timing-function;
 
-  @media screen and (min-width: 767px) {
+  @include mq('tablet') {
     position: relative;
     @include flex(inline-flex, center, center);
     padding-top: 32px;
@@ -45,7 +45,7 @@
 
 .site-nav__link--current {
   color: $accent-color;
-  @media screen and (min-width: 767px) {
+  @include mq('tablet') {
     &::after {
       content: '';
       position: absolute;

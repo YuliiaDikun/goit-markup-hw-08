@@ -72,7 +72,7 @@
     overflow: hidden;
     clip: rect(0 0 0 0);
 
-    &:checked ~ .modal-form__label--checkbox .modal-form__icon--checkbox {
+    &:checked ~ .modal-form__label--checkbox .modal-form__icon--check {
       display: none;
     }
 
@@ -97,16 +97,14 @@
     fill: $accent-color;
   }
 
-  &--checked {
-    display: none;
-    fill: $accent-color;
+  &--checkbox {
     margin-right: 7px;
     flex-shrink: 0;
   }
 
-  &--checkbox {
-    margin-right: 7px;
-    flex-shrink: 0;
+  &--checked {
+    display: none;
+    fill: $accent-color;
   }
 }
 

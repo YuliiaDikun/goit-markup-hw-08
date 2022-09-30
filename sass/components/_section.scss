@@ -6,16 +6,16 @@
     background-color: $minor-background-color;
   }
   &--desktop {
-    @media screen and (max-width: 1199px) {
+    @include mq('desktop', max) {
       display: none;
     }
   }
-  @media screen and (min-width: 1200px) {
+  @include mq('desktop') {
     padding-top: 94px;
     padding-bottom: 94px;
   }
   &--no-pb {
-    @media screen and (min-width: 1200px) {
+    @include mq('desktop') {
       padding-bottom: 0;
     }
   }
@@ -40,7 +40,7 @@
     clip-path: inset(50%);
     margin: -1px;
   }
-  @media screen and (min-width: 1200px) {
+  @include mq('desktop') {
     margin-bottom: 50px;
     font-size: 36px;
   }

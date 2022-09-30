@@ -2,10 +2,10 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: $main-background-color;
-  @media screen and (max-width: 1199px) {
+  @include mq('desktop', max) {
     text-align: center;
   }
-  @media screen and (min-width: 1200px) {
+  @include mq('desktop') {
     text-align: left;
   }
 }
@@ -14,14 +14,13 @@
   display: flex;
   flex-direction: column;
   gap: 60px;
-
-  @media screen and (min-width: 768px) {
+  @include mq('tablet') {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: baseline;
     justify-content: center;
   }
-  @media screen and (min-width: 1200px) {
+  @include mq('desktop') {
     gap: 0;
     flex-wrap: nowrap;
   }

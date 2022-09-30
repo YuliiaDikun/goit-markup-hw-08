@@ -2,20 +2,20 @@
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     width: 450px;
   }
-  @media screen and (min-width: 1200px) {
+  @include mq('desktop') {
     margin-left: auto;
     width: 560px;
   }
 }
 
 .form-signup {
-  @media screen and (min-width: 1200px) {
+  @include mq('desktop') {
     display: flex;
   }
 }
 
 .form-signup__label {
-  @media screen and (max-width: 1199px) {
+  @include mq('desktop', max) {
     display: block;
     margin-bottom: 20px;
   }
@@ -35,7 +35,7 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: transparent;
-  @media screen and (min-width: 1200px) {
+  @include mq('desktop') {
     width: 358px;
   }
 }

@@ -5,10 +5,10 @@
 }
 
 .works-list__item {
-  @media screen and (min-width: 768px) {
+  @include mq('tablet') {
     width: calc((100% - 30px) / 2);
   }
-  @media screen and (min-width: 1200px) {
+  @include mq('desktop') {
     width: calc((100% - 60px) / 3);
   }
 }
@@ -56,13 +56,13 @@
   font-size: 16px;
   line-height: 1.55;
   padding: 0 24px;
-  @media screen and (min-width: 480px) {
+  @include mq('phone') {
     font-size: 18px;
   }
-  @media screen and (min-width: 768px) {
+  @include mq('tablet') {
     padding: 48px 24px;
   }
-  @media screen and (min-width: 1200px) {
+  @include mq('desktop') {
     padding: 63px 24px;
   }
 }

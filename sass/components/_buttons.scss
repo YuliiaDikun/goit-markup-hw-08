@@ -3,7 +3,7 @@
   font-weight: 700;
   line-height: 1.87;
   letter-spacing: 0.06em;
-  @media screen and (min-width: 768px) {
+  @include mq('tablet') {
     @include button(216px);
   }
 }
@@ -11,7 +11,7 @@
 .form-signup__btn {
   @include button();
   padding: 10px 28px;
-  @media screen and(min-width:1200px) {
+  @include mq('desktop') {
     margin-left: 12px;
   }
 }
@@ -22,7 +22,7 @@
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
-  @media screen and (max-width: 480px) {
+  @include mq('phone', max) {
     @include button(194px);
     display: block;
     margin-left: auto;
@@ -55,14 +55,14 @@
   margin-bottom: 40px;
   column-gap: 8px;
   row-gap: 15px;
-  @media screen and (max-width: 767px) {
+  @include mq('tablet', max) {
     max-width: 326px;
   }
-  @media screen and (min-width: 768px) {
+  @include mq('tablet') {
     justify-content: center;
     margin-bottom: 30px;
   }
-  @media screen and (min-width: 1200px) {
+  @include mq('desktop') {
     margin-bottom: 50px;
   }
 }

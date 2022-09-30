@@ -2,7 +2,7 @@
   font-size: 16px;
   line-height: 1.18;
 
-  @media screen and (min-width: 768px) {
+  @include mq('tablet') {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -18,17 +18,16 @@
   @include link-shadow();
   border-radius: 0px 0px 4px 4px;
   background-color: $main-white-color;
-  @media screen and (min-width: 768px) {
+  @include mq('tablet') {
     width: calc((100% - 30px) / 2);
   }
-
-  @media screen and (min-width: 1200px) {
+  @include mq('desktop') {
     width: 270px;
   }
 }
 
 .workers-list__item:not(:last-child) {
-  @media screen and(max-width:768px) {
+  @include mq('tablet', max) {
     margin-bottom: 30px;
   }
 }
@@ -48,7 +47,7 @@
   @include flex(flex, center, center);
   gap: 10px;
   padding-bottom: 24px;
-  @media screen and (min-width: 1200px) {
+  @include mq('desktop') {
     padding-bottom: 30px;
   }
 }

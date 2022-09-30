@@ -6,13 +6,13 @@
 
 .clients__item {
   height: 92px;
-  @media screen and (min-width: 480px) {
+  @include mq('phone') {
     width: calc((100% - 30px) / 2);
   }
-  @media screen and (min-width: 768px) {
+  @include mq('tablet') {
     width: calc((100% - 60px) / 3);
   }
-  @media screen and (min-width: 1200px) {
+  @include mq('desktop') {
     width: 170px;
   }
 }
