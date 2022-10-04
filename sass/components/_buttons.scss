@@ -66,3 +66,20 @@
     margin-bottom: 50px;
   }
 }
+
+.button--close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  @include size(30px, 30px);
+  @include flex(inline-flex, center, center);
+  fill: $black-color;
+  cursor: pointer;
+  background-color: $main-white-color;
+  @include border($modal-close-color);
+  border-radius: 50%;
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}

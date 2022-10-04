@@ -564,6 +564,25 @@ ul {
   }
 }
 
+.button--close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: #000000;
+  cursor: pointer;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+.button--close:hover, .button--close:focus {
+  fill: #2196F3;
+}
+
 .hero {
   padding-top: 118px;
   padding-bottom: 118px;
@@ -988,12 +1007,14 @@ ul {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  word-wrap: break-word;
 }
 
 .works-list__subtitle {
   color: #757575;
   font-size: 16px;
   line-height: 1.87;
+  word-wrap: break-word;
 }
 
 .page-footer {
@@ -1195,25 +1216,6 @@ ul {
     max-width: 528px;
     min-height: 581px;
   }
-}
-
-.modal__close {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 30px;
-  height: 30px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  fill: #000000;
-  cursor: pointer;
-  background-color: #FFFFFF;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-}
-.modal__close:hover, .modal__close:focus {
-  fill: #2196F3;
 }
 
 .modal__icon {
