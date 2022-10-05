@@ -6,9 +6,8 @@
 
 .clients__item {
   height: 92px;
-  @include mq('phone') {
-    width: calc((100% - 30px) / 2);
-  }
+  width: calc((100% - 30px) / 2);
+
   @include mq('tablet') {
     width: calc((100% - 60px) / 3);
   }
